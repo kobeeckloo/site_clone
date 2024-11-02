@@ -1,6 +1,7 @@
 html, body {
     height: 100%;
     background-color: #f0f0f0;
+    margin: 0;
 }
 
 body {
@@ -15,6 +16,14 @@ body {
     background-color: hsl(0, 0%, 64%);
     background-attachment: fixed;
 }
+
+.Porsche-tekening-container {
+    position: fixed;
+    right: 0;
+    top: 53%;
+    transform: translateY(-47%);
+}
+
 
 .logo {
     position: fixed;
@@ -46,7 +55,6 @@ body {
 }
 
 .navigation {
-    padding-top: 0;
     padding-left: 0;
     position: fixed;
     width: 180px;
@@ -159,6 +167,113 @@ body {
     margin-right: 20px;
 }
 
+.Home-header {
+    font-size: 45px;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.slogan {
+    font-family: courier;
+    text-align: center;
+    margin-top: 400px;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.Porsche-tekening {
+    width: 400px;
+    float: right;
+    margin-left: 20px;
+    transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+.models {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.model {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: calc(45% - 20px);
+    margin: 10px;
+    padding: 15px;
+    text-align: left;
+    min-width: 250px;
+}
+
+.model-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+}
+
+.modelMacan {
+    margin-top: 57px;
+    margin-bottom: 30px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+}
+
+.model h2 {
+    font-family: courier;
+    text-align: center;
+}
+
+.model-description {
+    background-color: #f9f9f9;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: left;
+    font-size: small;
+    font-family:"courier New";
+}
+
+.model ul {
+    font-family: "Courier New";
+}
+
+@media (max-width: 1120px) {
+    .Porsche-tekening {
+        width: 300px;
+    }
+}
+
+@media (max-width: 1082px) {
+    .model {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .content-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .png-Geschiedenis {
+        width: 80%;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 900px) {
+    .Porsche-tekening {
+        width: 200px;
+    }
+}
+
 @media (max-width: 768px) {
     .navigation {
         width: 110px;
@@ -186,3 +301,10 @@ body {
         padding: 10px;
     }
 }
+
+@media (max-width: 700px) {
+    .Porsche-tekening {
+        display: none;
+    }
+}
+
