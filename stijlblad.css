@@ -1,4 +1,4 @@
-html {
+html, body {
     height: 100%;
     background-color: #f0f0f0;
 }
@@ -19,7 +19,7 @@ body {
 .logo {
     position: fixed;
     top: 28px;
-    left: 38px;
+    left: 55px;
     z-index: 2;
     width: 90px;
     height: auto;
@@ -36,8 +36,9 @@ header {
 }
 
 main {
-    margin-left: 180px;
-    
+    flex: 1;
+    margin-left: 200px;
+    margin-right: 200px;
 }
 body {
     background-color: #f0f0f0;
@@ -48,13 +49,13 @@ body {
     padding-top: 0;
     padding-left: 0;
     position: fixed;
-    width: 150px;
+    width: 180px;
     height: 100vh;
     background-color: #f0f0f0;
     padding-top: 100px;
     display: flex;
     flex-direction: column;
-
+    transition: width 0.3s ease;
 }
 
 .navigation ul {
@@ -80,6 +81,7 @@ body {
     color: black;
     text-decoration: none;
     text-align: center;
+    transition: padding 0.3s ease, font-size 0.3s ease;
 }
 
 .navigation a:hover {
@@ -93,5 +95,94 @@ body {
 }
 
 .footer {
-    margin-left: 180px;
+    margin-left: 200px;
+    padding: 10px;
+    position: relative;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    margin-right: 20px;
+    text-align: center;
+    position: fixed;
+    right: 0;
+}
+
+.timeline label {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+
+}
+
+.timeline label:hover {
+    background-color: #e0e0e0;
+}
+
+.timeline a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 10px;
+}
+
+.content h2 {
+    font-family:courier, sans-serif;
+    text-align: center;
+}
+
+.content-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.png-Geschiedenis {
+    width: 285px;
+    margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        width: 110px;
+        padding-top: 100px;
+    }
+
+    .navigation a {
+        padding: 20px;
+        font-size: 12px;
+    }
+
+    main, .footer {
+        margin-left: 130px;
+    }
+
+    .timeline {
+        position: fixed;
+        overflow-x: auto;
+        padding: 10px;
+        margin-bottom: 20px;
+        justify-content: space-around;
+    }
+
+    .content {
+        padding: 10px;
+    }
 }
