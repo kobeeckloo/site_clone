@@ -13,8 +13,8 @@ body {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: hsl(0, 0%, 64%);
     background-attachment: fixed;
+    line-height: 1
 }
 
 .Porsche-tekening-container {
@@ -49,10 +49,7 @@ main {
     margin-left: 200px;
     margin-right: 200px;
 }
-body {
-    background-color: #f0f0f0;
-    line-height: 1
-}
+
 
 .navigation {
     padding-left: 0;
@@ -82,7 +79,6 @@ body {
 .navigation a {
     display: block;
     padding: 30px;
-    padding-left: 30px;
     font-family: courier, sans-serif;
     font-size: 18px;
     font-weight: bold;
@@ -155,16 +151,34 @@ body {
 .content-item {
     display: flex;
     align-items: center;
-    border: 1px solid #ccc;
+    border: 1.5px solid #ccc;
     padding: 20px;
     margin-bottom: 20px;
     background-color: #f9f9f9;
-    border-radius: 8px;
+    border-radius: 50px;
 }
 
 .png-Geschiedenis {
     width: 285px;
     margin-right: 20px;
+}
+
+.content-item {
+    position: relative;
+    margin-bottom: 50px;
+    margin-top: 40px;
+}
+
+.content-item h3 {
+    text-align: center;
+    margin: 0px;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: courier;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .Home-header {
@@ -178,7 +192,7 @@ body {
 .slogan {
     font-family: courier;
     text-align: center;
-    margin-top: 400px;
+    bottom: 20px;
     position: fixed;
     left: 50%;
     transform: translateX(-50%)
@@ -229,7 +243,7 @@ body {
     text-align: center;
 }
 
-.model-description {
+.model-beschrijving {
     background-color: #f9f9f9;
     border: 2px solid #ccc;
     border-radius: 5px;
@@ -242,6 +256,84 @@ body {
 
 .model ul {
     font-family: "Courier New";
+}
+
+
+
+.contact-container {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 30px;
+    margin-right: auto;
+    
+}
+
+.contact-container h2 {
+    text-align: center;
+    font-family: courier;
+    font-size: 24px;
+    color: black;
+    margin-bottom: 25px;
+}
+
+.contact-invulveld {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(75, 75, 75, 0.774);
+    outline: none;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    background-color: #004080;
+}
+
+.required {
+    color: #e74c3c;
+    font-weight: bold;
 }
 
 @media (max-width: 1120px) {
@@ -274,7 +366,7 @@ body {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 750px) {
     .navigation {
         width: 110px;
         padding-top: 100px;
@@ -300,6 +392,12 @@ body {
     .content {
         padding: 10px;
     }
+
+    .form-container {
+        margin: 15px;
+        padding: 20px;
+    }
+
 }
 
 @media (max-width: 700px) {
@@ -307,4 +405,5 @@ body {
         display: none;
     }
 }
+
 
