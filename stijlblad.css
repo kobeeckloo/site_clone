@@ -358,6 +358,10 @@ button:active {
         width: 80%;
         margin-bottom: 15px;
     }
+
+    .content-item h3 {
+        font-size: 1em;
+    }
 }
 
 @media (max-width: 900px) {
@@ -406,4 +410,41 @@ button:active {
     }
 }
 
+@media (max-width: 600px) {
+    .navigation {
+        position: static;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 0;
+    }
 
+    .navigation li {
+        width: auto;
+        text-align: center;
+    }
+
+    .navigation a {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    main, .footer {
+        margin-left: 0;
+        margin-right: 150px;
+    }
+
+    .timeline {
+        width: 100px;
+    }
+
+    .timeline a {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .logo {
+        display: none;
+    }
+}
