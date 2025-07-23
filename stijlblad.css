@@ -9,7 +9,6 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-image: url('img/Achtergrond.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -17,11 +16,15 @@ body {
     line-height: 1
 }
 
+.inc-bg {
+    background-image: url('img/Achtergrond.png');
+}
+
 .Porsche-tekening-container {
     position: fixed;
     right: 0;
     top: 53%;
-    transform: translateY(-47%);
+    transform: translateY(-47%); 
 }
 
 
@@ -61,6 +64,9 @@ main {
     display: flex;
     flex-direction: column;
     transition: width 0.3s ease;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
 .navigation ul {
@@ -105,42 +111,41 @@ main {
 }
 
 .timeline {
+    position: fixed;
+    right: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 150px;
-    margin-right: 20px;
+    margin: 0 20px 20px 0;
+    padding: 10px;
     text-align: center;
-    position: fixed;
-    right: 0;
 }
 
-.timeline label {
+.timeline ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.timeline li a {
+    box-sizing: border-box;
     display: block;
-    justify-content: center;
-    align-items: center;
     width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-    cursor: pointer;
     padding: 10px;
     margin-bottom: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #f0f0f0;
-    transition: background-color 0.3s ease;
-
-}
-
-.timeline label:hover {
-    background-color: #e0e0e0;
-}
-
-.timeline a {
+    background: #f0f0f0;
+    color: #000;
     text-decoration: none;
-    color: black;
-    display: block;
-    padding: 10px;
+    transition: background-color .3s ease;
+}
+
+.timeline li a:hover,
+
+.timeline li a:focus {
+    background: #e0e0e0;
 }
 
 .content h2 {
@@ -156,6 +161,9 @@ main {
     margin-bottom: 20px;
     background-color: #f9f9f9;
     border-radius: 50px;
+    position: relative;
+    margin-bottom: 50px;
+    margin-top: 40px;
 }
 
 .png-Geschiedenis {
@@ -163,13 +171,7 @@ main {
     margin-right: 20px;
 }
 
-.content-item {
-    position: relative;
-    margin-bottom: 50px;
-    margin-top: 40px;
-}
-
-.content-item h3 {
+.content-item h2 {
     text-align: center;
     margin: 0px;
     font-size: 1.5em;
@@ -181,13 +183,16 @@ main {
     transform: translateX(-50%);
 }
 
-.Home-header {
+.Home-header h1 {
     font-size: 45px;
     position: fixed;
     left: 50%;
+    top: 10%;
     transform: translateX(-50%);
     text-align: center;
 }
+
+
 
 .slogan {
     font-family: courier;
@@ -212,7 +217,7 @@ main {
     margin: 20px;
 }
 
-.model {
+article {
     background-color: #f9f9f9;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -381,21 +386,15 @@ button:active {
         margin-left: 130px;
     }
 
-    .timeline {
-        position: fixed;
-        overflow-x: auto;
-        padding: 10px;
-        margin-bottom: 20px;
-        justify-content: space-around;
-    }
-
     .content {
         padding: 10px;
     }
 
-    .form-container {
-        margin: 15px;
+    .contact-container {
+        width: 100%;
+        margin: 10px 0;
         padding: 20px;
+        box-sizing: border-box;
     }
 
 }
